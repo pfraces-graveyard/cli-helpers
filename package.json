@@ -1,0 +1,19 @@
+{
+  "name": "cli-helpers",
+  "description": "Helpers for building CLIs",
+  "version": "0.1.0",
+  "main": "cli-helpers.js",
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-eslint": "*",
+    "husky": "*",
+    "mversion": "*"
+  },
+  "scripts": {
+    "test": "gulp test",
+    "precommit": "npm run test",
+    "patch": "mversion patch -mn",
+    "minor": "mversion minor -mn",
+    "major": "mversion major -mn"
+  }
+}
