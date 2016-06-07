@@ -3,17 +3,22 @@
   "description": "Helpers for building CLIs",
   "version": "0.1.0",
   "main": "cli-helpers.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pfraces/cli-helpers.git"
+  },
+  "license": "MIT",
   "devDependencies": {
-    "gulp": "*",
-    "gulp-eslint": "*",
-    "husky": "*",
-    "mversion": "*"
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^2.0.0",
+    "husky": "^0.11.4"
   },
   "scripts": {
     "test": "gulp test",
     "precommit": "npm run test",
-    "patch": "mversion patch -mn",
-    "minor": "mversion minor -mn",
-    "major": "mversion major -mn"
+    "postversion": "git push origin master && git push --tags",
+    "patch": "npm version patch",
+    "minor": "npm version minor",
+    "major": "npm version major"
   }
 }
